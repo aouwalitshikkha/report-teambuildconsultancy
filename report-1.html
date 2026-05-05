@@ -4,339 +4,268 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Structural Analysis - SEO Audit Report</title>
+  <title>Structural Analysis — SEO Audit</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } }
+    }
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
-<body class="bg-slate-950 text-white font-sans min-h-screen">
-  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
-    <div class="max-w-6xl mx-auto px-6 py-12">
-      <a href="index.html" class="inline-flex items-center gap-2 text-slate-400 hover:text-white transition mb-8">
-        <i class="fas fa-arrow-left"></i> Back to Reports
-      </a>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
-      <header class="mb-12">
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full text-sm text-slate-400 mb-4">
-          <i class="fas fa-chart-line"></i> SEO Audit Report
-        </div>
-        <h1 class="text-4xl font-bold mb-3">Structural Analysis</h1>
-        <p class="text-xl text-slate-400">Site architecture, design, server configuration, and site-wide technical audit</p>
-      </header>
+  <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-        <div class="bg-green-500/10 backdrop-blur-sm border border-green-500/30 rounded-2xl p-6 text-center">
-          <div class="text-3xl font-bold text-green-400">18</div>
-          <div class="text-sm text-green-400/70">Passed</div>
-        </div>
-        <div class="bg-yellow-500/10 backdrop-blur-sm border border-yellow-500/30 rounded-2xl p-6 text-center">
-          <div class="text-3xl font-bold text-yellow-400">7</div>
-          <div class="text-sm text-yellow-400/70">Warnings</div>
-        </div>
-        <div class="bg-red-500/10 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 text-center">
-          <div class="text-3xl font-bold text-red-400">4</div>
-          <div class="text-sm text-red-400/70">Critical</div>
-        </div>
-        <div class="bg-blue-500/10 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 text-center">
-          <div class="text-3xl font-bold text-blue-400">29</div>
-          <div class="text-sm text-blue-400/70">Total Checks</div>
-        </div>
+    <!-- Back -->
+    <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-10 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Reports
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-600 mb-4">
+        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+        Report 1
+      </span>
+      <h1 class="text-4xl font-extrabold mb-3">Structural Analysis</h1>
+      <p class="text-gray-500 text-lg">Site architecture, design, server configuration &amp; site-wide technical audit</p>
+    </header>
+
+    <!-- Summary Stats -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12">
+      <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 text-center shadow-sm">
+        <div class="text-3xl font-bold text-emerald-600">18</div>
+        <div class="text-xs text-emerald-500 mt-1 uppercase tracking-wider font-medium">Passed</div>
       </div>
-
-      <section id="site-architecture" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center">
-            <i class="fas fa-sitemap text-blue-400"></i>
-          </div>
-          Site Architecture
-        </h2>
-        <div class="space-y-4">
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Logical URL Structure</h4>
-              <p class="text-slate-400 text-sm">URLs follow a clear hierarchy and are human-readable.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">XML Sitemap Present</h4>
-              <p class="text-slate-400 text-sm">Sitemap found and accessible at /sitemap.xml</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Deep Pages Found</h4>
-              <p class="text-slate-400 text-sm">12 pages are more than 4 clicks from the homepage. Recommend flattening site structure.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-red-500/30 transition">
-            <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-times text-red-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-red-400">Orphan Pages Detected</h4>
-              <p class="text-slate-400 text-sm">5 pages have no internal links pointing to them. These pages are difficult for crawlers to discover.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Breadcrumb Navigation Missing</h4>
-              <p class="text-slate-400 text-sm">No breadcrumb schema or visual breadcrumbs found on inner pages.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="design-usability" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center">
-            <i class="fas fa-palette text-purple-400"></i>
-          </div>
-          Design & Usability
-        </h2>
-        <div class="space-y-4">
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Responsive Design</h4>
-              <p class="text-slate-400 text-sm">Site adapts properly to mobile, tablet, and desktop viewports.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Consistent Branding</h4>
-              <p class="text-slate-400 text-sm">Colors, typography, and logo usage are consistent across pages.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Font Size Issues on Mobile</h4>
-              <p class="text-slate-400 text-sm">Some body text is below 16px on mobile devices, affecting readability.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-red-500/30 transition">
-            <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-times text-red-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-red-400">Touch Elements Too Close</h4>
-              <p class="text-slate-400 text-sm">Navigation links and buttons have insufficient spacing on mobile (below 48px tap target).</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Missing Alt Text on Images</h4>
-              <p class="text-slate-400 text-sm">23 images across the site lack descriptive alt attributes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="server-performance" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <div class="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center">
-            <i class="fas fa-server text-orange-400"></i>
-          </div>
-          Server & Performance
-        </h2>
-        <div class="space-y-4">
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Server Response Time (TTFB)</h4>
-              <p class="text-slate-400 text-sm">Average TTFB is 0.4s, within acceptable range.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-red-500/30 transition">
-            <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-times text-red-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-red-400">No GZIP/Brotli Compression</h4>
-              <p class="text-slate-400 text-sm">Server is not serving compressed responses. Enable compression to reduce payload sizes by 60-80%.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Browser Caching Not Optimized</h4>
-              <p class="text-slate-400 text-sm">Cache-Control headers are missing for static assets (CSS, JS, images).</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-red-500/30 transition">
-            <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-times text-red-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-red-400">No CDN Detected</h4>
-              <p class="text-slate-400 text-sm">Assets are served from origin server only. A CDN would improve global load times.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Render-Blocking Resources</h4>
-              <p class="text-slate-400 text-sm">8 CSS and 3 JS files are blocking initial page render.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="security" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <div class="w-10 h-10 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-            <i class="fas fa-shield-halved text-cyan-400"></i>
-          </div>
-          Security
-        </h2>
-        <div class="space-y-4">
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">SSL Certificate Active</h4>
-              <p class="text-slate-400 text-sm">HTTPS is properly configured with a valid SSL certificate.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">HTTP to HTTPS Redirect</h4>
-              <p class="text-slate-400 text-sm">Some HTTP pages do not redirect to HTTPS. Ensure 301 redirect is in place for all variants.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-red-500/30 transition">
-            <div class="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-times text-red-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-red-400">Missing Security Headers</h4>
-              <p class="text-slate-400 text-sm">X-Content-Type-Options, X-Frame-Options, and Strict-Transport-Security headers are not set.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="site-wide-elements" class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
-          <div class="w-10 h-10 bg-pink-500/20 rounded-xl flex items-center justify-center">
-            <i class="fas fa-layer-group text-pink-400"></i>
-          </div>
-          Site-Wide Elements
-        </h2>
-        <div class="space-y-4">
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Global Navigation Present</h4>
-              <p class="text-slate-400 text-sm">Consistent main navigation across all pages.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-green-500/30 transition">
-            <div class="w-8 h-8 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-check text-green-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-green-400">Footer with Contact Info</h4>
-              <p class="text-slate-400 text-sm">Footer contains business name, contact details, and key links.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Duplicate Title Tags in Header/Footer</h4>
-              <p class="text-slate-400 text-sm">Header and footer links use identical anchor text across all pages, diluting internal link value.</p>
-            </div>
-          </div>
-          <div class="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-5 flex items-start gap-4 hover:border-yellow-500/30 transition">
-            <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-              <i class="fas fa-exclamation text-yellow-400"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-yellow-400">Search Functionality Missing</h4>
-              <p class="text-slate-400 text-sm">No site search feature found. Adding search improves user experience and engagement metrics.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 mb-12">
-        <h3 class="text-xl font-bold mb-6">Key Recommendations</h3>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="flex items-start gap-3 text-white/90">
-            <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm flex-shrink-0">1</span>
-            Enable GZIP/Brotli compression on the server
-          </div>
-          <div class="flex items-start gap-3 text-white/90">
-            <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm flex-shrink-0">2</span>
-            Implement a CDN for faster global content delivery
-          </div>
-          <div class="flex items-start gap-3 text-white/90">
-            <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm flex-shrink-0">3</span>
-            Fix orphan pages by adding internal links
-          </div>
-          <div class="flex items-start gap-3 text-white/90">
-            <span class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-sm flex-shrink-0">4</span>
-            Add missing security headers (HSTS, X-Frame-Options)
-          </div>
-          <div class="flex items-start gap-3 text-white/80">
-            <span class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-sm flex-shrink-0">5</span>
-            Flatten deep page structure (reduce click depth)
-          </div>
-          <div class="flex items-start gap-3 text-white/80">
-            <span class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-sm flex-shrink-0">6</span>
-            Add alt text to all images
-          </div>
-          <div class="flex items-start gap-3 text-white/80">
-            <span class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-sm flex-shrink-0">7</span>
-            Implement browser caching for static assets
-          </div>
-        </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-center shadow-sm">
+        <div class="text-3xl font-bold text-amber-600">7</div>
+        <div class="text-xs text-amber-500 mt-1 uppercase tracking-wider font-medium">Warnings</div>
       </div>
-
-      <footer class="text-center py-8 border-t border-slate-800 text-slate-500">
-        <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-slate-400 hover:text-white transition">Abdul Aouwal</a>. All rights reserved.</p>
-      </footer>
+      <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5 text-center shadow-sm">
+        <div class="text-3xl font-bold text-rose-600">4</div>
+        <div class="text-xs text-rose-500 mt-1 uppercase tracking-wider font-medium">Critical</div>
+      </div>
+      <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 text-center shadow-sm">
+        <div class="text-3xl font-bold text-blue-600">29</div>
+        <div class="text-xs text-blue-500 mt-1 uppercase tracking-wider font-medium">Total</div>
+      </div>
     </div>
+
+    <!-- Section: Site Architecture -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-sitemap text-blue-600"></i>
+        </span>
+        Site Architecture
+      </h2>
+      <div class="space-y-3">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Logical URL Structure</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">XML Sitemap Present</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Deep Pages Found</h4>
+            <p class="text-gray-500 text-sm mt-1">12 pages are more than 4 clicks from the homepage. Recommend flattening.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-rose-700 text-sm">Orphan Pages Detected</h4>
+            <p class="text-gray-500 text-sm mt-1">5 pages have no internal links. Crawlers may not discover them.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Breadcrumb Navigation Missing</h4>
+            <p class="text-gray-500 text-sm mt-1">No breadcrumb schema or visual breadcrumbs on inner pages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Design & Usability -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-palette text-purple-600"></i>
+        </span>
+        Design &amp; Usability
+      </h2>
+      <div class="space-y-3">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Responsive Design</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Consistent Branding</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Font Size Issues on Mobile</h4>
+            <p class="text-gray-500 text-sm mt-1">Body text below 16px on mobile, affecting readability.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-rose-700 text-sm">Touch Elements Too Close</h4>
+            <p class="text-gray-500 text-sm mt-1">Navigation links and buttons below 48px tap target on mobile.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Missing Alt Text on Images</h4>
+            <p class="text-gray-500 text-sm mt-1">23 images lack descriptive alt attributes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Server & Performance -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-gauge-high text-orange-600"></i>
+        </span>
+        Server &amp; Performance
+      </h2>
+      <div class="space-y-3">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Good TTFB (0.4s avg)</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-rose-700 text-sm">No GZIP/Brotli Compression</h4>
+            <p class="text-gray-500 text-sm mt-1">Server not compressing responses. Enable to reduce payload by 60-80%.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Browser Caching Not Optimized</h4>
+            <p class="text-gray-500 text-sm mt-1">Cache-Control headers missing for static assets.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-rose-700 text-sm">No CDN Detected</h4>
+            <p class="text-gray-500 text-sm mt-1">Assets served from origin only. CDN would improve global speeds.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Render-Blocking Resources</h4>
+            <p class="text-gray-500 text-sm mt-1">8 CSS and 3 JS files blocking initial render.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Security -->
+    <section class="mb-10">
+      <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 bg-cyan-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-shield-halved text-cyan-600"></i>
+        </span>
+        Security
+      </h2>
+      <div class="space-y-3">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">SSL Certificate Active &amp; Valid</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">HTTP to HTTPS Redirect Incomplete</h4>
+            <p class="text-gray-500 text-sm mt-1">Some HTTP pages not redirecting to HTTPS. Add 301 redirects.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-rose-700 text-sm">Missing Security Headers</h4>
+            <p class="text-gray-500 text-sm mt-1">No HSTS, X-Frame-Options, or X-Content-Type-Options headers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Site-Wide Elements -->
+    <section class="mb-12">
+      <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 bg-pink-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-layer-group text-pink-600"></i>
+        </span>
+        Site-Wide Elements
+      </h2>
+      <div class="space-y-3">
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Global Navigation Present</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
+          <div><h4 class="font-semibold text-emerald-700 text-sm">Footer with Contact Info</h4></div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">Duplicate Anchor Text in Header/Footer</h4>
+            <p class="text-gray-500 text-sm mt-1">Identical anchor text dilutes internal link value.</p>
+          </div>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
+          <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
+          <div>
+            <h4 class="font-semibold text-amber-700 text-sm">No Site Search</h4>
+            <p class="text-gray-500 text-sm mt-1">Adding search improves UX and engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-7 mb-12 shadow-sm">
+      <h3 class="text-lg font-bold mb-5 flex items-center gap-2">
+        <i class="fas fa-lightbulb text-amber-500"></i>
+        Key Recommendations
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">1</span>Enable GZIP/Brotli compression</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">2</span>Implement a CDN</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">3</span>Fix orphan pages (add internal links)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">4</span>Add security headers (HSTS, etc.)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">5</span>Flatten deep page structure</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">6</span>Add alt text to all images</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">7</span>Implement browser caching</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
   </div>
 </body>
 </html>

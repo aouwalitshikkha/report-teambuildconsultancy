@@ -4,9 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Detail — JS Dependency Issue</title>
+  <title>JS Dependency Issue — SEO Audit Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
+  <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+
+    <!-- Back -->
+    <a href="report-1.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Structural Analysis
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-rose-50 border border-rose-200 rounded-full text-xs font-medium text-rose-600 mb-4">
+        <i class="fas fa-times-circle text-rose-500 text-xs"></i> Critical Issue
+      </span>
+      <h1 class="text-3xl font-extrabold mb-3">JS Dependency Issue</h1>
+      <p class="text-gray-500">Some pages are JavaScript dependent. Content may not render properly without JS enabled.</p>
+    </header>
+
+    <!-- The Importance of No-JS Testing -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">The Importance of No-JS Testing</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Accessibility and Inclusivity</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Ensuring core content remains accessible without JavaScript is a fundamental principle of web accessibility. If a site relies exclusively on client-side scripts, users with specific assistive technologies or restricted browser settings may be entirely excluded from accessing information.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Search Engine Optimization (SEO)</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">While modern search engines like Google can crawl JavaScript, they typically process it in a two-stage indexing process. Initially, the HTML and CSS are indexed; JavaScript is rendered only during a subsequent pass.</p>
+            <p class="text-gray-500 text-sm leading-relaxed mt-2">By ensuring critical content is available in the initial HTML payload, you guarantee that search engines can index your primary keywords and metadata immediately, reducing the risk of delayed or incomplete indexing.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Performance and Resilience</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">On high-latency networks or low-powered mobile devices, JavaScript execution can fail or be significantly delayed. Testing with JavaScript disabled allows us to evaluate the "graceful degradation" of the site, ensuring that users receive a functional, meaningful experience rather than a blank screen during script execution delays.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Site-Specific Observations -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-4">Site-Specific Observations: Home Page</h2>
+      <p class="text-sm text-gray-500 mb-6"><strong class="text-gray-700">URL:</strong> <a href="https://teambuildconsultancy.co.uk/" target="_blank" class="text-blue-600 hover:underline">https://teambuildconsultancy.co.uk/</a></p>
+      <p class="text-gray-600 text-sm mb-6"><strong class="text-gray-800">Observation:</strong> Upon disabling JavaScript, the Hero section, Client Experience module, and several supporting images fail to render.</p>
+
+      <h3 class="font-bold text-gray-800 mb-4">Impact Assessment</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Element</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Priority</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Rationale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Hero Section & Form</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">This section contains the primary Call to Action (CTA). It is essential that the lead generation form remains functional to prevent loss of conversions.</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Client Reviews</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">Social proof is vital for establishing brand authority and trust; this content should be visible in the initial HTML payload.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-gray-800">Supporting Images</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded">Moderate</span></td>
+              <td class="py-3 px-4 text-gray-500">While less critical for functionality, missing imagery negatively impacts the visual hierarchy and professional aesthetic of the site.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Visual Comparison -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">Visual Comparison</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <div class="bg-gray-100 border border-gray-200 rounded-xl overflow-hidden mb-3 aspect-video flex items-center justify-center">
+            <img src="images/home-js.png" alt="Home with JS" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-gray-400 text-sm\'>Image: home-js.png</div>';">
+          </div>
+          <p class="text-sm font-semibold text-center text-gray-700">JavaScript Enabled</p>
+        </div>
+        <div>
+          <div class="bg-gray-100 border border-gray-200 rounded-xl overflow-hidden mb-3 aspect-video flex items-center justify-center">
+            <img src="images/home-no-js.png" alt="Home without JS" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-gray-400 text-sm\'>Image: home-no-js.png</div>';">
+          </div>
+          <p class="text-sm font-semibold text-center text-gray-700">JavaScript Disabled</p>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-4 text-center italic">Comparison shows significant content loss in the Hero and Social Proof sections when scripts are inactive.</p>
+      <p class="text-xs text-gray-400 mt-2 text-center">Note: These screenshots were captured using Google Chrome in headless mode; consequently, certain visual elements may deviate from the standard browser rendering.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
 </body>
 </html>

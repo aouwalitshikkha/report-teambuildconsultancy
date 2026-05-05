@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>XML Sitemap Issues — SEO Audit Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+  <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+
+    <!-- Back -->
+    <a href="report-1.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Structural Analysis
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-rose-50 border border-rose-200 rounded-full text-xs font-medium text-rose-600 mb-4">
+        <i class="fas fa-times-circle text-rose-500 text-xs"></i> Critical Issue
+      </span>
+      <h1 class="text-3xl font-extrabold mb-3">XML Sitemap Issues</h1>
+      <p class="text-gray-500">Sitemap exists but contains errors, missing pages, or submission issues that may impact crawlability.</p>
+    </header>
+
+    <!-- Site-Specific Observations -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-4">Site-Specific Observations</h2>
+      <p class="text-sm text-gray-500 mb-6"><strong class="text-gray-700">Sitemap URL:</strong> <a href="https://teambuildconsultancy.co.uk/sitemap_index.xml" target="_blank" class="text-blue-600 hover:underline">https://teambuildconsultancy.co.uk/sitemap_index.xml</a></p>
+      <p class="text-gray-600 text-sm mb-6"><strong class="text-gray-800">Observation:</strong> The sitemap index is present and accessible, but it contains multiple sub-sitemaps and URLs that should not be included, wasting crawl budget and sending poor signals to search engines.</p>
+
+      <h3 class="font-bold text-gray-800 mb-4">Issue Assessment</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Issue</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Priority</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Rationale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Category Sitemap Present</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">Category archive pages are set to noindex and should not be in the sitemap. Including them wastes crawl budget and creates conflicting signals.</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Testimonials Pages Redirected</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">Testimonial pages return redirects (3xx). Sitemaps should only contain final 200 OK URLs; redirecting URLs waste crawl budget and may not be followed reliably.</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Talents Pages Too Thin</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">Talent profile pages contain very little unique content and provide low value to searchers. Including thin content in the sitemap risks index bloat and quality demotion.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-gray-800">Unnecessary Pages in Page Sitemap</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded">Warning</span></td>
+              <td class="py-3 px-4 text-gray-500">The page sitemap contains utility and thank-you pages (<strong class="text-gray-700">/demo-2/</strong>, <strong class="text-gray-700">/thank-you/</strong>, <strong class="text-gray-700">/calendly-booking-thank-you/</strong>, <strong class="text-gray-700">/thank-you-2/</strong>, <strong class="text-gray-700">/meta-form/</strong>) that should be excluded as they are not meant for organic search.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">Recommendations</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Remove Category Sitemap from Index</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Exclude the category sitemap entirely from the sitemap index. Since category archive pages are noindex, they should not be submitted to search engines via sitemap.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Remove Redirected Testimonial Pages</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Audit and remove all testimonial URLs that return 301 or 302 redirects from the sitemap. Replace them with the final destination URLs if those pages should be indexed.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Exclude Thin Talents Pages</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Remove talents profile pages from the sitemap unless they contain substantial unique content. Consider consolidating thin profiles or adding noindex to low-value pages to prevent index bloat.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">4</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Purge Unnecessary Utility Pages</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Remove the following non-indexable utility pages from the page sitemap: <strong class="text-gray-700">/demo-2/</strong>, <strong class="text-gray-700">/thank-you/</strong>, <strong class="text-gray-700">/calendly-booking-thank-you/</strong>, <strong class="text-gray-700">/thank-you-2/</strong>, and <strong class="text-gray-700">/meta-form/</strong>. Add noindex tags to these pages if not already present.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Importance of XML Sitemaps -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">The Importance of XML Sitemaps</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Discovery and Indexing</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">An XML sitemap acts as a roadmap for search engines, helping them discover and understand the structure of your website. It ensures that all important pages — especially those without strong internal linking — are found and considered for indexing.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Crawl Efficiency</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Sitemaps provide metadata about each URL, such as last modified date and update frequency. This helps search engines prioritize crawling, allocate crawl budget more effectively, and revisit updated content faster.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Large and Complex Sites</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">For websites with deep architecture, thousands of pages, or dynamic content, a sitemap is essential. Without it, search engine crawlers may miss newly added or deeply nested pages, leading to incomplete indexing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-4">Resources</h2>
+      <div class="space-y-3">
+        <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" target="_blank" class="flex items-center gap-3 text-sm text-gray-600 hover:text-blue-600 transition group">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-external-link-alt text-xs"></i>
+          </span>
+          <span class="group-hover:underline">Google Search Central — Learn about sitemaps</span>
+        </a>
+        <a href="https://www.sitemaps.org/protocol.html" target="_blank" class="flex items-center gap-3 text-sm text-gray-600 hover:text-blue-600 transition group">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i class="fas fa-external-link-alt text-xs"></i>
+          </span>
+          <span class="group-hover:underline">Sitemaps.org — XML Sitemap Protocol</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

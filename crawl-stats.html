@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Crawl Stats — SEO Audit Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+  <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+
+    <!-- Back -->
+    <a href="report-1.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Structural Analysis
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-rose-50 border border-rose-200 rounded-full text-xs font-medium text-rose-600 mb-4">
+        <i class="fas fa-times-circle text-rose-500 text-xs"></i> Critical Issue
+      </span>
+      <h1 class="text-3xl font-extrabold mb-3">Crawl Stats</h1>
+      <p class="text-gray-500">Google is spending too much crawl budget on resources instead of content, and average response times are above acceptable thresholds.</p>
+    </header>
+
+    <!-- Site-Specific Observations -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-4">Site-Specific Observations</h2>
+      <p class="text-gray-600 text-sm mb-6"><strong class="text-gray-800">Observation:</strong> Google Search Console crawl stats reveal an inefficient crawl pattern where Googlebot spends significantly more time on CSS and JavaScript than on actual HTML content.</p>
+
+      <h3 class="font-bold text-gray-800 mb-4">Crawl Stats by File Type</h3>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">File Type</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Crawl Budget Used</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">CSS</td>
+              <td class="py-3 px-4 text-gray-500">39%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Too High</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">JavaScript</td>
+              <td class="py-3 px-4 text-gray-500">27%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Too High</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">HTML</td>
+              <td class="py-3 px-4 text-gray-500">15%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Too Low</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Image</td>
+              <td class="py-3 px-4 text-gray-500">15%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded">Acceptable</span></td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-gray-800">Other File Type</td>
+              <td class="py-3 px-4 text-gray-500">2%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded">Normal</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-bold text-gray-800 mb-4">Crawl Stats by Googlebot Type</h3>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Googlebot Type</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Crawl Budget Used</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Page Resource Load</td>
+              <td class="py-3 px-4 text-gray-500">76%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Too High</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Smartphone</td>
+              <td class="py-3 px-4 text-gray-500">12%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded">Low</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Desktop</td>
+              <td class="py-3 px-4 text-gray-500">8%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded">Low</span></td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4 font-medium text-gray-800">Image</td>
+              <td class="py-3 px-4 text-gray-500">3%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded">Normal</span></td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4 font-medium text-gray-800">AdsBot</td>
+              <td class="py-3 px-4 text-gray-500">1%</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded">Normal</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="font-bold text-gray-800 mb-4">Average Response Time</h3>
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-3xl font-bold text-rose-600">354 ms</span>
+          <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Above Acceptable</span>
+        </div>
+        <div class="space-y-3 text-sm">
+          <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full bg-emerald-500"></span><span class="text-gray-600">Less than 200 ms — Excellent</span></div>
+          <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full bg-amber-500"></span><span class="text-gray-600">200–500 ms — Good</span></div>
+          <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full bg-orange-500"></span><span class="text-gray-600">500–1000 ms — Poor</span></div>
+          <div class="flex items-center gap-3"><span class="w-3 h-3 rounded-full bg-rose-500"></span><span class="text-gray-600">Greater than 1 s — Critical</span></div>
+        </div>
+        <p class="text-sm text-gray-500 mt-4">The current average response time of <strong>354 ms</strong> falls in the upper range of "Good" but is close to the "Poor" threshold. Reducing this will improve crawl efficiency and indexing speed.</p>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">Recommendations</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Reduce CSS and JavaScript Bloat</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">CSS (39%) and JavaScript (27%) together consume 66% of crawl budget. Minify, combine, and remove unused CSS and JS files. Inline critical CSS and defer non-critical scripts so Googlebot spends more time on HTML content.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Fix Page Resource Load Dominance</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Page resource load takes 76% of crawl budget. This means Googlebot is spending most of its time fetching supporting files rather than actual content. Reduce resource dependency and ensure HTML is lightweight and fast to parse.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Improve Average Response Time</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Bring the average response time below 200 ms by enabling server-side caching, optimizing database queries, and upgrading hosting if necessary. Faster responses allow Googlebot to crawl more pages within its allocated budget.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">4</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Prioritize Content Crawling</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">HTML should represent the largest share of crawl budget, not CSS and JS. Restructure the site so that content is immediately available in the HTML without requiring heavy resource loading, improving both crawl efficiency and indexability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Importance of Efficient Crawling -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">The Importance of Efficient Crawling</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Crawl Budget Is Limited</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Search engines allocate a fixed crawl budget to each website. When 66% of that budget is wasted on CSS and JavaScript, fewer content pages are crawled and indexed. This means important pages may be missed entirely.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Content Should Be King</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">The ideal crawl pattern has HTML content dominating the crawl stats. When design and script resources outweigh content, it signals that the site is over-engineered and that search engines must work harder to extract meaningful information.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Response Time Affects Indexing Speed</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Slow server responses mean Googlebot can fetch fewer pages per session. A 354 ms average response time may cause indexing delays for new and updated content, reducing the site's freshness and competitiveness in search results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

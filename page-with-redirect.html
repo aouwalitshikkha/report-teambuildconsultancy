@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Page with Redirect — SEO Audit Detail</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+  <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
+
+    <!-- Back -->
+    <a href="report-1.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Structural Analysis
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-rose-50 border border-rose-200 rounded-full text-xs font-medium text-rose-600 mb-4">
+        <i class="fas fa-times-circle text-rose-500 text-xs"></i> Critical Issue
+      </span>
+      <h1 class="text-3xl font-extrabold mb-3">Page with Redirect</h1>
+      <p class="text-gray-500">Multiple pages are redirecting to the homepage or irrelevant pages, wasting crawl budget and confusing users.</p>
+    </header>
+
+    <!-- Site-Specific Observations -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-4">Site-Specific Observations</h2>
+      <p class="text-gray-600 text-sm mb-6"><strong class="text-gray-800">Observation:</strong> An audit of internal redirects revealed numerous pages that redirect to the homepage or unrelated content instead of their logical destination.</p>
+
+      <h3 class="font-bold text-gray-800 mb-4">Issue Assessment</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Source URL</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Redirects To</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Priority</th>
+              <th class="text-left py-3 px-4 font-semibold text-gray-700">Rationale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4"><a href="https://teambuildconsultancy.co.uk/careers/" target="_blank" class="text-blue-600 hover:underline">/careers/</a></td>
+              <td class="py-3 px-4 text-gray-500">Homepage</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">A careers page should remain accessible or redirect to a relevant hiring page. Redirecting to the homepage frustrates job seekers and wastes any existing backlinks.</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="py-3 px-4"><a href="https://teambuildconsultancy.co.uk/2026/01/26/" target="_blank" class="text-blue-600 hover:underline">/2026/01/26/</a></td>
+              <td class="py-3 px-4 text-gray-500">Homepage</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">Date archive pages redirecting to the homepage serve no purpose. If the archive is not needed, it should return a 404 or be properly redirected to the blog index.</td>
+            </tr>
+            <tr>
+              <td class="py-3 px-4"><a href="https://teambuildconsultancy.co.uk/benefits-of-hiring-a-remote-xero-bookkeeper/" target="_blank" class="text-blue-600 hover:underline">/benefits-of-hiring-a-remote-xero-bookkeeper/</a></td>
+              <td class="py-3 px-4 text-gray-500">Blog page (irrelevant)</td>
+              <td class="py-3 px-4"><span class="px-2 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded">Critical</span></td>
+              <td class="py-3 px-4 text-gray-500">A specific article about Xero bookkeepers redirecting to a generic blog page breaks user intent. Visitors expecting specific content land on an unrelated page, increasing bounce rate.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">Recommendations</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Only Keep Relevant Redirects</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Maintain 301 redirects only when the source and destination are contextually related. For example, an old service page should redirect to the updated version of that same service — never to the homepage or an unrelated section.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Remove Homepage Redirects</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Stop redirecting removed pages to the homepage by default. If a page is gone and has no relevant replacement, serve a proper 404 response. This tells search engines the content is permanently gone and preserves user trust.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Audit and Fix Irrelevant Redirects</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Review all redirects mapped to generic pages (like the main blog index). Point each URL to the most relevant existing content, or remove the redirect and let the URL return 404 if no suitable replacement exists.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Importance of Proper Redirects -->
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm mb-8">
+      <h2 class="text-xl font-bold mb-6">The Importance of Proper Redirects</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Preserve Link Equity</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Backlinks pointing to redirected pages pass authority to the destination. When everything redirects to the homepage, that equity is diluted across a generic page rather than strengthening relevant content. Proper redirects ensure link value flows to the right place.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">User Intent and Experience</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Users click a link with a specific expectation. Landing on the homepage or an unrelated page creates frustration and increases bounce rate. Relevant redirects respect user intent and keep visitors engaged with your site.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-2">Search Engine Clarity</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Search engines treat mass homepage redirects as soft 404s. This wastes crawl budget and creates confusion about which pages are actually available. Clear, relevant redirects or proper 404s help crawlers understand your site structure accurately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

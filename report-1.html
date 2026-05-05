@@ -17,162 +17,148 @@
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans antialiased">
 
-  <div class="flex min-h-screen">
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white border-r border-gray-200 p-6 fixed h-screen hidden lg:block overflow-y-auto">
-      <a href="index.html" class="flex items-center gap-2 text-gray-400 hover:text-gray-600 transition text-sm mb-8">
-        <i class="fas fa-arrow-left"></i> Back to Home
-      </a>
+    <!-- Back -->
+    <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Reports
+    </a>
 
-      <div class="mb-6">
-        <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-600">
-          <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-          Report 1
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-600 mb-4">
+        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+        Report 1
+      </span>
+      <h1 class="text-4xl font-extrabold mb-3">Structural Analysis</h1>
+      <p class="text-gray-500 text-lg">Site architecture, design, server configuration &amp; site-wide technical audit</p>
+    </header>
+
+    <!-- Section: Design & Usability -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-palette text-purple-600"></i>
         </span>
+        Design &amp; Usability
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Responsive Design</h3>
+          <p class="text-gray-500 text-sm">Site adapts properly to mobile, tablet, and desktop viewports.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Consistent Branding</h3>
+          <p class="text-gray-500 text-sm">Colors, typography, and logo usage are consistent across pages.</p>
+        </div>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Font Size Issues on Mobile</h3>
+          <p class="text-gray-500 text-sm">Body text below 16px on mobile, affecting readability.</p>
+        </div>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Touch Elements Too Close</h3>
+          <p class="text-gray-500 text-sm">Navigation links and buttons below 48px tap target on mobile.</p>
+        </div>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Missing Alt Text on Images</h3>
+          <p class="text-gray-500 text-sm">23 images across the site lack descriptive alt attributes.</p>
+        </div>
       </div>
+    </div>
 
-      <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">Sections</h3>
-      <nav class="space-y-1">
-        <a href="#design-usability" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition font-medium">
-          <i class="fas fa-palette text-purple-500 w-4 text-center"></i> Design & Usability
-        </a>
-        <a href="#site-architecture" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition font-medium">
-          <i class="fas fa-sitemap text-blue-500 w-4 text-center"></i> Site Architecture
-        </a>
-        <a href="#recommendations" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition font-medium">
-          <i class="fas fa-lightbulb text-amber-500 w-4 text-center"></i> Recommendations
-        </a>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="flex-1 lg:ml-64">
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 py-12">
-
-        <!-- Back (mobile) -->
-        <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm lg:hidden">
-          <i class="fas fa-arrow-left"></i> Back to Reports
-        </a>
-
-        <!-- Header -->
-        <header class="mb-10">
-          <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-600 mb-4">
-            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
-            Report 1
-          </span>
-          <h1 class="text-4xl font-extrabold mb-3">Structural Analysis</h1>
-          <p class="text-gray-500 text-lg">Site architecture, design, server configuration &amp; site-wide technical audit</p>
-        </header>
-
-        <!-- Section: Design & Usability -->
-        <section id="design-usability" class="mb-10">
-          <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
-            <span class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-              <i class="fas fa-palette text-purple-600"></i>
-            </span>
-            Design &amp; Usability
-          </h2>
-          <div class="space-y-3">
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
-              <div><h4 class="font-semibold text-emerald-700 text-sm">Responsive Design</h4></div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
-              <div><h4 class="font-semibold text-emerald-700 text-sm">Consistent Branding</h4></div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-amber-700 text-sm">Font Size Issues on Mobile</h4>
-                <p class="text-gray-500 text-sm mt-1">Body text below 16px on mobile, affecting readability.</p>
-              </div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-rose-700 text-sm">Touch Elements Too Close</h4>
-                <p class="text-gray-500 text-sm mt-1">Navigation links and buttons below 48px tap target on mobile.</p>
-              </div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-amber-700 text-sm">Missing Alt Text on Images</h4>
-                <p class="text-gray-500 text-sm mt-1">23 images lack descriptive alt attributes.</p>
-              </div>
-            </div>
+    <!-- Section: Site Architecture -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-sitemap text-blue-600"></i>
+        </span>
+        Site Architecture
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
           </div>
-        </section>
-
-        <!-- Section: Site Architecture -->
-        <section id="site-architecture" class="mb-10">
-          <h2 class="text-xl font-bold mb-5 flex items-center gap-3">
-            <span class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
-              <i class="fas fa-sitemap text-blue-600"></i>
-            </span>
-            Site Architecture
-          </h2>
-          <div class="space-y-3">
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
-              <div><h4 class="font-semibold text-emerald-700 text-sm">Logical URL Structure</h4></div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-check text-emerald-600 text-sm"></i></span>
-              <div><h4 class="font-semibold text-emerald-700 text-sm">XML Sitemap Present</h4></div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-amber-700 text-sm">Deep Pages Found</h4>
-                <p class="text-gray-500 text-sm mt-1">12 pages are more than 4 clicks from the homepage. Recommend flattening.</p>
-              </div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-times text-rose-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-rose-700 text-sm">Orphan Pages Detected</h4>
-                <p class="text-gray-500 text-sm mt-1">5 pages have no internal links. Crawlers may not discover them.</p>
-              </div>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-5 flex items-start gap-4 shadow-sm">
-              <span class="w-7 h-7 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fas fa-exclamation text-amber-600 text-sm"></i></span>
-              <div>
-                <h4 class="font-semibold text-amber-700 text-sm">Breadcrumb Navigation Missing</h4>
-                <p class="text-gray-500 text-sm mt-1">No breadcrumb schema or visual breadcrumbs on inner pages.</p>
-              </div>
-            </div>
+          <h3 class="font-bold text-gray-800 mb-2">Logical URL Structure</h3>
+          <p class="text-gray-500 text-sm">URLs follow a clear hierarchy and are human-readable.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
           </div>
-        </section>
-
-        <!-- Recommendations -->
-        <section id="recommendations" class="mb-12">
-          <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-7 shadow-sm">
-            <h3 class="text-lg font-bold mb-5 flex items-center gap-2">
-              <i class="fas fa-lightbulb text-amber-500"></i>
-              Key Recommendations
-            </h3>
-            <div class="grid sm:grid-cols-2 gap-3">
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">1</span>Enable GZIP/Brotli compression</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">2</span>Implement a CDN</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">3</span>Fix orphan pages (add internal links)</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">4</span>Add security headers (HSTS, etc.)</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">5</span>Flatten deep page structure</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">6</span>Add alt text to all images</div>
-              <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">7</span>Implement browser caching</div>
-            </div>
+          <h3 class="font-bold text-gray-800 mb-2">XML Sitemap Present</h3>
+          <p class="text-gray-500 text-sm">Sitemap found and accessible at /sitemap.xml</p>
+        </div>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
           </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
-          <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
-        </footer>
-
+          <h3 class="font-bold text-gray-800 mb-2">Deep Pages Found</h3>
+          <p class="text-gray-500 text-sm">12 pages are more than 4 clicks from the homepage.</p>
+        </div>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Orphan Pages Detected</h3>
+          <p class="text-gray-500 text-sm">5 pages have no internal links. Crawlers may not discover them.</p>
+        </div>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Breadcrumb Navigation Missing</h3>
+          <p class="text-gray-500 text-sm">No breadcrumb schema or visual breadcrumbs on inner pages.</p>
+        </div>
       </div>
-    </main>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-7 mb-12 shadow-sm">
+      <h3 class="text-lg font-bold mb-5 flex items-center gap-2">
+        <i class="fas fa-lightbulb text-amber-500"></i>
+        Key Recommendations
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">1</span>Enable GZIP/Brotli compression</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">2</span>Implement a CDN</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">3</span>Fix orphan pages (add internal links)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">4</span>Add security headers (HSTS, etc.)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">5</span>Flatten deep page structure</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">6</span>Add alt text to all images</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">7</span>Implement browser caching</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
 
   </div>
 </body>

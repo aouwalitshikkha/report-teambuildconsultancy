@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Audit Report - TeamBuilding Consultancy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 2rem; border-radius: 12px; margin-bottom: 2rem; }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { opacity: 0.9; font-size: 1.1rem; }
+    .meta { display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap; }
+    .meta-item { background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 8px; }
+    .score-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .score-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; }
+    .score-card h3 { color: #64748b; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 1rem; }
+    .score-circle { width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: bold; }
+    .score-good { background: #dcfce7; color: #166534; }
+    .score-warning { background: #fef3c7; color: #92400e; }
+    .score-critical { background: #fee2e2; color: #991b1b; }
+    .reports-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .report-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+    .report-card:hover { transform: translateY(-4px); box-shadow: 0 8px 12px rgba(0,0,0,0.1); }
+    .report-card h2 { color: #667eea; margin-bottom: 0.5rem; }
+    .report-card p { color: #64748b; margin-bottom: 1rem; }
+    .status-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .badge-critical { background: #fee2e2; color: #991b1b; }
+    .badge-warning { background: #fef3c7; color: #92400e; }
+    .badge-pass { background: #dcfce7; color: #166534; }
+    footer { text-align: center; padding: 2rem; color: #64748b; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SEO Audit Report</h1>
+      <p>Comprehensive SEO Analysis & Recommendations</p>
+      <div class="meta">
+        <div class="meta-item">Client: TeamBuilding Consultancy</div>
+        <div class="meta-item">Date: May 2026</div>
+        <div class="meta-item">Audited By: SEO Team</div>
+      </div>
+    </header>
+
+    <div class="score-overview">
+      <div class="score-card">
+        <h3>Overall Score</h3>
+        <div class="score-circle score-warning">68</div>
+        <p>Needs Improvement</p>
+      </div>
+      <div class="score-card">
+        <h3>Technical SEO</h3>
+        <div class="score-circle score-warning">65</div>
+        <p>12 Issues Found</p>
+      </div>
+      <div class="score-card">
+        <h3>On-Page SEO</h3>
+        <div class="score-circle score-good">78</div>
+        <p>8 Issues Found</p>
+      </div>
+      <div class="score-card">
+        <h3>Off-Page SEO</h3>
+        <div class="score-circle score-critical">52</div>
+        <p>15 Issues Found</p>
+      </div>
+    </div>
+
+    <h2 style="margin-bottom: 1.5rem;">Detailed Reports</h2>
+    <div class="reports-grid">
+      <a href="report-1.html" class="report-card">
+        <h2>1. Technical SEO</h2>
+        <p>Crawlability, site speed, mobile-friendliness, indexation, and infrastructure analysis.</p>
+        <span class="status-badge badge-warning">12 Issues</span>
+      </a>
+      <a href="report-2.html" class="report-card">
+        <h2>2. On-Page SEO</h2>
+        <p>Title tags, meta descriptions, headings, content quality, and keyword optimization.</p>
+        <span class="status-badge badge-warning">8 Issues</span>
+      </a>
+      <a href="report-3.html" class="report-card">
+        <h2>3. Off-Page SEO</h2>
+        <p>Backlink profile, domain authority, social signals, and referral traffic.</p>
+        <span class="status-badge badge-critical">15 Issues</span>
+      </a>
+      <a href="report-4.html" class="report-card">
+        <h2>4. Content Analysis</h2>
+        <p>Content gaps, duplicate content, thin pages, and keyword cannibalization.</p>
+        <span class="status-badge badge-warning">6 Issues</span>
+      </a>
+      <a href="report-5.html" class="report-card">
+        <h2>5. Competitor Analysis</h2>
+        <p>Market positioning, ranking gaps, and competitive opportunities.</p>
+        <span class="status-badge badge-pass">Analysis Ready</span>
+      </a>
+      <a href="report-6.html" class="report-card">
+        <h2>6. Recommendations</h2>
+        <p>Action plan with prioritized tasks, timelines, and expected impact.</p>
+        <span class="status-badge badge-pass">Action Plan</span>
+      </a>
+    </div>
+
+    <footer>
+      <p>Generated for TeamBuilding Consultancy | May 2026</p>
+    </footer>
+  </div>
+</body>
+</html>

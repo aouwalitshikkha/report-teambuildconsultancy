@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Structural Analysis — SEO Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+
+    <!-- Back -->
+    <a href="index.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to Reports
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-medium text-blue-600 mb-4">
+        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+        Report 2
+      </span>
+      <h1 class="text-4xl font-extrabold mb-3">Structural Analysis</h1>
+      <p class="text-gray-500 text-lg">Site architecture, design, server configuration &amp; site-wide technical audit</p>
+    </header>
+
+    <!-- Section: Design & Usability -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-palette text-purple-600"></i>
+        </span>
+        Design &amp; Usability
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Responsive Design</h3>
+          <p class="text-gray-500 text-sm">Site adapts properly to mobile, tablet, and desktop viewports.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">PASS</span>
+            <i class="fas fa-check-circle text-emerald-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Consistent Branding</h3>
+          <p class="text-gray-500 text-sm">Colors, typography, and logo usage are consistent across pages.</p>
+        </div>
+        <a href="js-dependency.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">JS Dependency Issue</h3>
+          <p class="text-gray-500 text-sm mb-4">Some pages are JavaScript dependent. Content may not render properly without JS enabled.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">No Site Search</h3>
+          <p class="text-gray-500 text-sm">Adding search improves UX and engagement.</p>
+        </div>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Breadcrumb Navigation Missing</h3>
+          <p class="text-gray-500 text-sm">No breadcrumb schema or visual breadcrumbs on inner pages. It is important for SEO and user orientation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Site Architecture -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-sitemap text-blue-600"></i>
+        </span>
+        Site Architecture
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="xml-sitemap-issues.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">XML Sitemap Issues</h3>
+          <p class="text-gray-500 text-sm mb-4">Sitemap exists but contains errors, missing pages, or submission issues.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <a href="meta-robots-issues.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Meta Robots Index Tag Problems</h3>
+          <p class="text-gray-500 text-sm mb-4">Incorrect meta robots tags are preventing important pages from being indexed or allowing low-value pages to be indexed.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Robots.txt Issue</h3>
+          <p class="text-gray-500 text-sm">A complete robots.txt audit will be added at the end of the site audit.</p>
+        </div>
+        <a href="page-speed-issues.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Page Speed Issue</h3>
+          <p class="text-gray-500 text-sm mb-4">Every page loads too slowly, negatively impacting user experience and search rankings.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Server TTFB Not Stable</h3>
+          <p class="text-gray-500 text-sm">Server Time to First Byte is inconsistent, causing unpredictable page load times.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Google Search Console Issues -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-chart-line text-emerald-600"></i>
+        </span>
+        Google Search Console Issues
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="page-with-redirect.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Page with Redirect</h3>
+          <p class="text-gray-500 text-sm mb-4">Multiple pages are redirected to the home page or irrelevant pages instead of relevant destinations.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <a href="404-issues.html" class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-amber-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">404 Page Not Found</h3>
+          <p class="text-gray-500 text-sm mb-4">Having some 404 pages is normal. To remove them faster from search results, consider using 410 Gone instead of 404 Not Found.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 text-white text-xs font-bold rounded-lg hover:bg-amber-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Blocked by Robots.txt</h3>
+          <p class="text-gray-500 text-sm">Most testimonial pages are blocked by robots.txt and also redirected. Remove them from the sitemap, add noindex follow, and remove the block from robots.txt.</p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">INFO</span>
+            <i class="fas fa-info-circle text-blue-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Excluded by No Index</h3>
+          <p class="text-gray-500 text-sm">This is an informational status showing pages intentionally excluded from indexing. Note: The FAQs page is redirected to the homepage and should either be removed or replaced with a dedicated FAQ page.</p>
+        </div>
+        <div class="bg-white border border-amber-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">WARNING</span>
+            <i class="fas fa-exclamation-circle text-amber-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Crawled Currently Not Indexed</h3>
+          <p class="text-gray-500 text-sm">Many pages are feed pages and some are redirected pages causing this issue. Feed pages are not necessary for modern websites. Remove them using WordPress plugins or custom functions.</p>
+        </div>
+        <div class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Discovered — Currently Not Indexed</h3>
+          <p class="text-gray-500 text-sm">All pages in this status are thin content, mostly testimonials and talent profiles. Remove these pages, remove them from the sitemap, and set any remaining thin content to noindex, follow.</p>
+        </div>
+        <a href="page-speed-issues.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Core Web Vitals</h3>
+          <p class="text-gray-500 text-sm mb-4">Severely affected across all pages. Poor LCP, INP, and CLS scores are reported in GSC and impacting mobile rankings. Detailed analysis and recommendations are available in the Page Speed section.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+        <a href="crawl-stats.html" class="bg-white border border-rose-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-rose-300 transition block">
+          <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full">CRITICAL</span>
+            <i class="fas fa-times-circle text-rose-500 text-xl"></i>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Crawl Stats</h3>
+          <p class="text-gray-500 text-sm mb-4">Googlebot spends 66% of crawl budget on CSS and JavaScript instead of HTML content. Average response time is 354 ms, which is above the acceptable threshold.</p>
+          <span class="inline-flex items-center gap-2 px-4 py-2 bg-rose-600 text-white text-xs font-bold rounded-lg hover:bg-rose-700 transition">
+            Check Details <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-7 mb-8 shadow-sm">
+      <h3 class="text-lg font-bold mb-5 flex items-center gap-2">
+        <i class="fas fa-lightbulb text-amber-500"></i>
+        Key Recommendations
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">1</span>Remove category, testimonial, and thin-content pages from the sitemap</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">2</span>Set category, utility, thank-you, and thin pages to noindex, follow</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">3</span>Delete or draft unused pages (/demo-2/, orphaned talent profiles)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">4</span>Fix 404 redirects: map to relevant pages, not the homepage</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">5</span>Remove unnecessary JavaScript and minimize builder-generated JS</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">6</span>Optimize images (WebP/AVIF, lazy loading, responsive sizing)</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">7</span>Enable GZIP/Brotli compression and implement browser caching</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">8</span>Reduce CSS/JS bloat so HTML content dominates crawl budget</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">9</span>Remove WordPress feed pages using a plugin or custom functions</div>
+        <div class="flex items-start gap-3 text-sm"><span class="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-xs flex-shrink-0 text-blue-600 font-bold">10</span>Improve server response time to below 200 ms</div>
+      </div>
+    </div>
+
+    <!-- Strategic Note -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-12 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="w-9 h-9 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-triangle-exclamation text-amber-600"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-amber-800 mb-2">Strategic Note</h4>
+          <p class="text-sm text-amber-800 leading-relaxed">According to our previous discussions with you and your team members, we strongly recommend developing a <strong>content policy</strong> and a <strong>developer policy</strong> to maintain site quality going forward. If you are thinking long-term, the site should be optimized with proper speed improvements. Additionally, some existing content is not good enough and should be reviewed for quality and relevance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

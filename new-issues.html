@@ -40,6 +40,38 @@
             <p class="text-gray-500 text-sm">A new page labeled "home-new" has appeared in the XML sitemap. This page was not present in previous audits and may be a draft or duplicate that should be removed from the sitemap.</p>
           </div>
         </div>
+
+        <div class="flex items-start gap-4 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0"><i class="fas fa-exclamation text-xs"></i></span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-1">Blog Post Dates Linking to 404 Pages</h3>
+            <p class="text-gray-500 text-sm">On every blog post page (e.g., <a href="https://teambuildconsultancy.co.uk/cost-to-hire-a-wordpress-developer/" target="_blank" class="text-rose-600 hover:underline">/cost-to-hire-a-wordpress-developer/</a>), the published date (e.g., "December 5, 2025") is hyperlinked and leads to a 404 error. These date links should either be removed or pointed to valid archive pages.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0"><i class="fas fa-exclamation text-xs"></i></span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-1">Talent Page Category Links to 404</h3>
+            <p class="text-gray-500 text-sm">On the <a href="https://teambuildconsultancy.co.uk/talent/" target="_blank" class="text-rose-600 hover:underline">/talent/</a> page, several category links are pointing to 404 pages. These broken links should be removed or corrected to point to valid destinations.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0"><i class="fas fa-exclamation text-xs"></i></span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-1">Feed URL Should Return 410 Gone</h3>
+            <p class="text-gray-500 text-sm">The WordPress feed URL (<a href="https://teambuildconsultancy.co.uk/feed/" target="_blank" class="text-rose-600 hover:underline">/feed/</a>) is still accessible. It should return a <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs font-mono">410 Gone</code> status to signal to search engines that this resource has been permanently removed and should be dropped from the index.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 bg-rose-50 border border-rose-200 rounded-xl">
+          <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center font-bold text-sm flex-shrink-0"><i class="fas fa-exclamation text-xs"></i></span>
+          <div>
+            <h3 class="font-bold text-gray-800 mb-1">Irrelevant Elementskit Dynamic Content Page in Sitemap</h3>
+            <p class="text-gray-500 text-sm">An irrelevant page (<a href="https://teambuildconsultancy.co.uk/elementskit-content/dynamic-content-widget-f404c23-99/" target="_blank" class="text-rose-600 hover:underline">/elementskit-content/dynamic-content-widget-f404c23-99/</a>) has appeared in the sitemap. This appears to be a builder-generated artifact and should be removed from the sitemap and set to noindex or deleted.</p>
+          </div>
+        </div>
       </div>
     </div>
 

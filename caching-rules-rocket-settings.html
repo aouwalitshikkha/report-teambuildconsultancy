@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Caching Rules &amp; WP Rocket Settings — SEO Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>html { scroll-behavior: smooth; }</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+  <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+
+    <!-- Back -->
+    <a href="report-2.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-gray-600 transition mb-8 text-sm">
+      <i class="fas fa-arrow-left"></i> Back to CTR Optimization
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 bg-teal-50 border border-teal-200 rounded-full text-xs font-medium text-teal-600 mb-4">
+        <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+        Performance Configuration
+      </span>
+      <h1 class="text-4xl font-extrabold mb-3">Caching Rules &amp; WP Rocket Settings</h1>
+      <p class="text-gray-500 text-lg">Cloudflare cache rules and WP Rocket configuration for <strong>teambuildconsultancy.co.uk</strong></p>
+    </header>
+
+    <!-- 1. Cloudflare Cache Rules -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-cloud-upload-alt text-teal-600"></i>
+        </span>
+        Cloudflare Cache Rules
+      </h2>
+      <p class="text-gray-500 mb-4">Add these rules under <strong>Rules &rarr; Cache Rules</strong> in the Cloudflare dashboard. Order matters — static cache rule first.</p>
+
+      <div class="space-y-6">
+        <!-- Rule 1 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg">Rule 1: Cache Static Assets</h3>
+            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Edge TTL: 30 days</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4 font-mono text-sm text-gray-700 overflow-x-auto">
+            (http.request.uri.path contains ".jpg" or http.request.uri.path contains ".jpeg" or http.request.uri.path contains ".gif" or http.request.uri.path contains ".png" or http.request.uri.path contains ".webp" or http.request.uri.path contains ".avif" or http.request.uri.path contains ".css" or http.request.uri.path contains ".js" or http.request.uri.path contains ".svg" or http.request.uri.path contains ".woff" or http.request.uri.path contains ".woff2" or http.request.uri.path contains ".eot" or http.request.uri.path contains ".ttf" or http.request.uri.path contains ".ico" or http.request.uri.path contains ".mp4" or http.request.uri.path contains ".pdf" or http.request.uri.path contains ".zip" or http.request.uri.path contains ".gz")
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div><span class="font-semibold">Cache status:</span> Eligible for cache</div>
+            <div><span class="font-semibold">Edge TTL:</span> 30 days</div>
+            <div><span class="font-semibold">Browser TTL:</span> 30 days</div>
+          </div>
+        </div>
+
+        <!-- Rule 2 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg">Rule 2: Bypass Admin &amp; Login</h3>
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Bypass</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4 font-mono text-sm text-gray-700 overflow-x-auto">
+            (starts_with(http.request.uri.path, "/wp-admin/") or http.request.uri.path eq "/wp-login.php")
+          </div>
+          <div class="text-sm"><span class="font-semibold">Cache status:</span> Bypass</div>
+        </div>
+
+        <!-- Rule 3 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg">Rule 3: Bypass REST API &amp; XML-RPC</h3>
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Bypass</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4 font-mono text-sm text-gray-700 overflow-x-auto">
+            (starts_with(http.request.uri.path, "/wp-json/") or http.request.uri.path eq "/xmlrpc.php" or http.request.uri.path contains "rest_route=")
+          </div>
+          <div class="text-sm"><span class="font-semibold">Cache status:</span> Bypass</div>
+        </div>
+
+        <!-- Rule 4 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-lg">Rule 4: Bypass Logged-in Users</h3>
+            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Bypass</span>
+          </div>
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 mb-4 font-mono text-sm text-gray-700 overflow-x-auto">
+            (http.request.cookies contains "wordpress_logged_in_")
+          </div>
+          <div class="text-sm"><span class="font-semibold">Cache status:</span> Bypass</div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- 3. WP Rocket Settings -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-rocket text-rose-600"></i>
+        </span>
+        WP Rocket Settings
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-tachometer-alt text-rose-500"></i> Dashboard &rarr; Cloudflare</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Cloudflare API</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Global API Key &amp; Email</td><td class="py-2 font-medium text-right">Add</td></tr>
+              <tr><td class="py-2 text-gray-500">Cloudflare Caching</td><td class="py-2 font-medium text-right">Enable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-database text-rose-500"></i> Cache tab</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Mobile cache</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Separate cache for mobile</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Cache for logged-in users</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr><td class="py-2 text-gray-500">Cache lifespan</td><td class="py-2 font-medium text-right">10 hours</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-code text-rose-500"></i> File Optimization tab</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Minify HTML</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Minify CSS</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Minify JS</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Combine CSS</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Combine JS</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Defer JS</td><td class="py-2 font-medium text-right">Safe Mode</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Delay JS execution</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr><td class="py-2 text-gray-500">Remove unused CSS</td><td class="py-2 font-medium text-right">Enable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-images text-rose-500"></i> Media tab</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">LazyLoad images</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">LazyLoad iframes/videos</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Add missing image dimensions</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr><td class="py-2 text-gray-500">WebP cache</td><td class="py-2 font-medium text-right">Enable</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-play-circle text-rose-500"></i> Preload tab</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Preload cache</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Preload links</td><td class="py-2 font-medium text-right">Enable</td></tr>
+              <tr><td class="py-2 text-gray-500">Font preload</td><td class="py-2 font-medium text-right">Add key fonts</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
+          <h3 class="font-bold mb-3 flex items-center gap-2"><i class="fas fa-trash-alt text-rose-500"></i> Database tab</h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Post revisions</td><td class="py-2 font-medium text-right">Limit to 5</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Auto-drafts</td><td class="py-2 font-medium text-right">Clean weekly</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Trashed posts</td><td class="py-2 font-medium text-right">Clean weekly</td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2 text-gray-500">Spam/comments</td><td class="py-2 font-medium text-right">Clean weekly</td></tr>
+              <tr><td class="py-2 text-gray-500">Expired transients</td><td class="py-2 font-medium text-right">Clean weekly</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Optional Config -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+        <span class="w-10 h-10 bg-gray-100 rounded-xl flex items-center justify-center">
+          <i class="fas fa-file-code text-gray-600"></i>
+        </span>
+        Optional &mdash; wp-config.php
+      </h2>
+      <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <p class="text-gray-500 text-sm mb-4">Add before <code class="bg-gray-100 px-2 py-0.5 rounded text-sm">/* That's all */</code> in <code class="bg-gray-100 px-2 py-0.5 rounded text-sm">wp-config.php</code>:</p>
+        <div class="bg-gray-900 rounded-xl p-4 font-mono text-sm text-green-400 overflow-x-auto">
+          define('WP_AUTO_UPDATE_CORE', false);<br>
+          define('DISABLE_WP_CRON', true);
+        </div>
+        <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-700">
+          <i class="fas fa-info-circle"></i> Note: WP Rocket manages .htaccess caching rules automatically &mdash; do not edit manually.
+        </div>
+        <div class="mt-4 bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
+          <i class="fas fa-exclamation-triangle"></i> <strong>Important:</strong> After applying these changes, thoroughly test the site to verify everything works — check front-end pages, admin login, cache purge, and confirm no broken functionality.
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 pt-8 pb-4 text-center text-sm text-gray-400">
+      <p>&copy; 2026 <a href="https://abdulaouwal.com" class="text-gray-500 hover:text-gray-700 transition">Abdul Aouwal</a> &mdash; All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
